@@ -1,0 +1,1079 @@
+[INCLUDE=presentation]
+Title         : Topic Detection for Chinese Buddhist Texts
+
+Sub Title     : Analyzing Daoxuan's _Xingshi chao_
+Author        : Tom Newhall
+Affiliation   : UCLA, Asian Languages and Cultures
+Email         : tomnewhall@ucla.edu
+Reveal Theme  : serif
+transition    : 'fade'
+
+title {font-size: 175%}
+h1{ font-size: 150%}
+caption{color: grey; font-size: 14pt; }
+red{background-color: "red"}
+orange{background-color: "orange"}
+yellow{background-color: "yellow"}
+green{background-color: "green"}
+blue{background-color: "lightblue"}
+indigo{background-color: "indigo"}
+violet{background-color: "violet"}
+Framed{padding:1ex; margin-top:1ex; background-color: Cornsilk; }
+
+[TITLE]
+
+
+# Content
+
+[TOC]
+
+# Background: Daoxuan and the _Xingshi chao_
+
+~begin Columns
+
+~~ begin Column
+- The _Xingshi chao_ 行事鈔 is a work written in Classical Chinese on Buddhist monastic rules.
+- It was written by the monk Daoxuan 道宣 (596-667) circa 640 CE and is considered one of the fundamental works on monasticism in East Asia.
+~~ End Column
+
+~~ begin Column {text-align: center; vertical-align: top}
+![Narahaku Daoxuan smaller]\
+[Daoxuan, courtesy of the Nara museum]{.caption}
+~~ End Column
+
+
+
+~ End Columns
+
+[Narahaku Daoxuan smaller]: images/Narahaku-Daoxuan-smaller.jpg "Daoxuan" {max-width:60%; margin-top: -1em; margin-bottom: 0em; margin-left: 1em; caption: "Daoxuan"}
+
+
+## The Content of the _Xingshi chao_
+
+~begin Columns 
+
+~~ begin Column {width: 10em}
+- The _Xingshi chao_ is a type of Buddhist *commentary.*
+  - That is, a secondary work meant to explain one or more pre-existing works.
+~~ End Column
+
+~~begin Column {vertical-align: top}
+![NDL Shijiki p.1 cropped smaller]
+
+[A manuscript of a commentary on the Xingshichao]{.caption}
+~~ End Column
+
+~ End Columns
+
+
+[NDL Shijiki p.1 cropped smaller]: images/NDL-Shijiki-p.1-cropped-smaller.jpg "NDL Shijiki p.1 cropped smaller" { margin-left:1em; max-width:70% }
+
+## The _Xingshi chao_ and the Vinaya
+
+- In this case, the _Xingshi chao_ is meant to explain *Vinaya* texts.
+  - *Vinaya* texts are the fundamental 'rule books' for Buddhist monks and nuns.
+  - The content of these books includes not only rules, but the stories that led to the creation of the rules
+  - They also include other guidelines and procedures for living as a Buddhist monk or nun.
+  - The content of these books is said to have been first taught by the Buddha (ca. 5th century BCE), however, many versions of these rules appeared over time.
+
+## Translation of the Vinaya into Chinese
+
+- These rule books were eventually written down, and some of them were translated into Chinese around the 5th century CE.
+  - One of the goals of Daoxuan's text is to explain the differences between these different versions.
+  - In particular, Daoxuan focuses his commentary on one version of these rules known as the _Sifen lü_ 四分律, or "Four-part Vinaya"
+
+~ begin Framed
+  Therefore, we will call Daoxuan's work the "Commentary on the Four-Part Vinaya"
+~ End Framed
+
+
+# Research Question
+
+- Although this text has been studied for a millenia, what was Daoxuan trying to say with this work?
+  - Most research on this work focuses on individual sections, or themes that relate to other works, but few scholars have attempted to look at this work as a whole.
+  - This is partly because the work is rather long and difficult to understand.
+    - Translated into English, the whole work would surely be nearly a thousand pages long.
+
+## Solution
+
+- With digital methods we can analyze long works very quickly, to come to some preliminary understanding of the work as a whole.
+  - Such an approach is sometimes described as "distant reading" in contrast to the more traditional "close reading" approach of humanities (cf. Moretti 2013)
+  - Such methods may also add a degree of *objectivity* to the research process.
+  - Furthermore, such an approach is *scalable*; we may be able to apply such a method to other works.
+- However, such an approach may lead to a cursory and superficial understanding of the work, particularly if it is seen as an end in itself.
+
+
+
+# Methodology: Functionalizing the question
+- To take advantage of digital methods, we have to *functionalize* our research question
+  - That is to say, we need to turn the problem of "what was Daoxuan trying to say with this work?" in to a question that can be answered with the help of an algorithm.
+- By doing so, however, we fundamentally change the nature of the answer.
+
+
+## Specifying the question
+- We could understand the question "what is Daoxuan trying to say in the _Xingshi chao_" as 
+  - "what is the main point of the work" or 
+  - "what is the main topic of the work" or, more broadly 
+  - "what are some important topics or keywords in the work?"
+- Of course, these questions have largely been answered in the past by other scholars.
+
+## Modern Studies of Daoxuan's _Commentary_
+
+- Modern secondary research such as Hirakawa (1964), Satō (1986), or Totsugu (2014) touch on a variety of important points in this work, 
+  - But do not settle on a single 'main point' for the work.
+
+## Pre-modern Studies of Daoxuan's _Commentary_
+- Pre-modern scholarship and commentary also dealt with these questions of topics and themes
+  - For example, the Chinese commentator Yuanzhao 元照 (1048–1116), studied the text by dividing the work into a highly detailed outline, called a _kewen_ 科文.
+  - Each item of this outline reports the topic or theme of the corresponding section
+
+
+## 'Close reading' vs. 'Distant reading'
+
+- All of the above answers from previous research were arrived at through a process of 'close reading'
+  - That is to say, a process by which a human *reads* the text, comes to an *understanding* of it, and then comes to some *interpretation* or *judgement* about its content.
+- Nevertheless, this process of interpretation is subject to the same sorts of observation bias that any subjective observation could be.
+
+~ begin Framed
+Can an approach that deals with the text as a whole arrive at the same conclusions, or perhaps new conclusions, in a way that bias can be more strictly controlled?
+~ end Framed
+
+- This is the promise of 'distant reading'
+
+## 'Distant reading' and text analysis
+
+- In a 2013 book by the same title, Franco Moretti promotes 'distant reading', the concept that texts can be studied as part of a larger canon of literature.
+  - This approach is 'distant' in the sense it seeks to look at a whole text or group of texts from a metaphorical 'distance'
+- Because of the sheer volume of text produced by humans, this is practically impossible to do for any one scholar studying any one corpus or genre of texts.
+  - However, computers can 'read' and analyze vast tracts of text very quickly.
+
+
+## Functionalization of the question again
+- If our question has turned from "what is Daoxuan trying to say in the _Xingshi chao_?" to "what are the main topics in this work?" how can we further turn this into a question that is answerable with a computer?
+  - If we theorize that a word that appears relatively more frequently in a text is relatively more important, then we can ask *"what are the most frequent terms in this text?"*
+    - In this sense, we want to perform a *term frequency analysis* and ask a question that falls under the broader category of *topic modelling*.
+
+## Problems with term frequency analysis
+- However, there is not a direct correlation between the frequency of a word and it's subjective importance.
+  - For example, in English, articles such as *"the"* and *"of"* appear most commonly 
+    - However, these words tell us relatively little about the content of the text itself.
+- Therefore, we need to 'filter' out common words, and look for terms that are *relatively* more frequent than they are in similar texts in general
+
+# Term Frequency - Inverse Document Frequency (tf-idf)
+
+ - In a loosely-defined way we could therefore say that, in theory:
+~ begin framed
+The importance of a term in a text `=` the frequency of that term in that text `-` the frequency of that term in a corpus of similar texts
+~ end framed
+
+- This approach is essentially the same as a *Term Frequency - Inverse Document Frequency (tf-idf)* approach to topic modeling
+  - However, the specifics of the implementation here differ from more sophisticated versions of this approach 
+
+## A corpus for comparison
+
+~ begin Columns
+~~ Begin Column
+- As previously mentioned, Daoxuan's _Xingshi chao_ is a commentarial text
+  - This means that, similar to modern academic writing, it cites and comments on many other texts
+  - The sources of Daoxuan's citations have been extensively studied by Satō (1986, pp. 90-96)
+~~ End Column
+~~ begin Column
+![Sato XSC chart p. 90 cropped]
+~~ End Column
+~ End Columns
+
+
+[Sato XSC chart p. 90 cropped]: images/Sato-XSC-chart-p.-90-cropped.jpg "Sato XSC chart p. 90 cropped" { max-width: 90%; }
+
+## Satō's chart 
+
+~ begin Columns
+~~ Begin Column
+- Here, the rows of the chart correspond to the preface and 30 chapters of the _Commentary_
+~~ End Column
+~~ begin Column
+![Sato XSC chart p. 90 cropped rows highlighted]
+~~ End Column
+~ End Columns
+
+[Sato XSC chart p. 90 cropped rows highlighted]: images/Sato-XSC-chart-p.-90-cropped-rows-highlighted.jpg "Sato XSC chart p. 90 cropped rows highlighted" { max-width: 90%; }
+
+## Satō's chart
+
+~ begin Columns
+~~ Begin Column
+- The columns correspond to the titles of works cited in the _Commentary_.
+~~ End Column
+~~ begin Column
+![Sato XSC chart p. 90 cropped columns highlighted]
+~~ End Column
+~ End Columns
+
+[Sato XSC chart p. 90 cropped columns highlighted]: images/Sato-XSC-chart-p.-90-cropped-columns-highlighted.jpg "Sato XSC chart p. 90 cropped columns highlighted" { max-width: 90%; }
+
+## Satō's chart
+~ begin Columns
+~~ Begin Column
+- The numbers refer to the number of times a work is cited in a particular chapter
+~~ End Column
+~~ begin Column
+![Sato XSC chart p. 90 cropped numbers highlighted]
+~~ End Column
+~ End Columns
+
+[Sato XSC chart p. 90 cropped numbers highlighted]: images/Sato-XSC-chart-p.-90-cropped-numbers-highlighted.jpg "Sato XSC chart p. 90 cropped numbers highlighted" { max-width: 90%; }
+
+## Satō's chart
+
+~ begin Columns
+~~ Begin Column
+- The bottom row of numbers gives the total number of citations of that work throughout the whole _Commentary_.
+~~ End Column
+~~ begin Column
+![Sato XSC chart p. 90 cropped totals bar]
+~~ End Column
+~ End Columns
+
+
+[Sato XSC chart p. 90 cropped totals bar]: images/Sato-XSC-chart-p.-90-cropped-totals-bar.jpg "Sato XSC chart p. 90 cropped totals bar" { max-width: 90%; }
+
+## Satō's chart
+
+~ begin Columns
+~~ Begin Column
+  - The bottom row contains abbreviated bibliographic data about the work being cited.
+~~ End Column
+~~ begin Column
+![Sato XSC chart p. 90 cropped references]
+~~ End Column
+~ End Columns
+
+[Sato XSC chart p. 90 cropped references]: images/Sato-XSC-chart-p.-90-cropped-references.jpg "Sato XSC chart p. 90 cropped references" { max-width: 90%; }
+
+## Vinaya Citations in the _Commentary_
+
+~ begin Columns
+~~ Begin Column
+- Although most works are cited only once or twice in the _Commentary_, one set of texts is cited several hundred times each, (highlighted in red)
+~~ End Column
+~~ begin Column
+![Sato XSC chart p. 95 cropped]
+~~ End Column
+~ End Columns
+
+
+## Vinaya Citations in the _Commentary_
+
+~ begin Columns
+~~ Begin Column
+- Unsurprisingly, these texts are all translated Vinaya texts: the main source that Daoxuan is drawing upon in his analysis.
+  - Specifically, the _Sifen lü_ 四分律 or "Four Part Vinaya" is cited 477 times, more commonly than any other Vinaya text. (highlighted in blue)
+~~ End Column
+~~ begin Column
+![Sato XSC chart p. 95 cropped]
+~~ End Column
+~ End Columns
+
+~ begin Framed
+Since these texts are cited by Daoxuan's text, these Vinaya texts can serve as a corpus to compare Daoxuan's work against.
+~end Framed
+
+[Sato XSC chart p. 95 cropped]: images/Sato-XSC-chart-p.-95-cropped.jpg "Sato XSC chart p. 95 cropped" { max-width: 90%; }
+
+
+
+## Hypothesis
+
+~ begin framed
+In essence, we hypothosize that if a word appears relatively more frequenly in Daoxuan's work than it does in the Vinaya texts he cites, it should be a relatively more important concept to Daoxuan.
+~ end framed
+
+- And in this way, we seek to make an inroad to the questions of "What concepts were important in Daoxuan's text?" and "What was Daoxuan trying to say?"
+
+# Procedure and findings
+
+
+## Daoxuan's texts: Manuscripts
+
+~ begin Columns
+~~ begin Column
+- Daoxuan's texts were originally written by hand in calligraphic manuscripts that would have looked similar to this text:
+~~ end Column
+~~ begin Column
+![NDL Shijiki p.1 cropped smaller]
+
+[Manuscript from the National Diet Library, Tokyo]{.caption}
+~~ end Column
+~ End Columns
+
+## Daoxuan's texts: Woodblock prints
+
+~ begin Columns
+~~ begin Column
+ - Later, these texts were set onto woodblock prints:
+~~ End Column
+~~ begin Column
+![Woodblock print XSC example]
+
+[19th-century Woodblock print preserved at the University of Tokyo Main Library]{.caption}
+~~ End Column
+
+~ End Columns
+
+[Woodblock print XSC example]: images/Woodblock-print-XSC-example.jpg "Woodblock print XSC example" { width:auto; max-width:90% }
+
+## Daoxuan's texts: Moveable Type
+
+~ begin Columns
+~~ begin Column
+- In the 20th century, these were then typeset using moveable-type metal printing:
+~~ End Column
+~~ begin Column
+![XSC Taisho Page]
+
+[First page of the 'Taisho Edition' of the Commentary]{.caption}
+~~ End Column
+
+~ End Columns
+
+[XSC Taisho Page]: images/XSC-Taisho-Page.jpg "XSC Taisho Page" { width:auto; max-width:90% }
+
+
+
+
+## Daoxuan's texts: Digital Text
+
+~ begin Columns
+~~ begin Column
+- In the late 20th and early 21st century, these texts were then scanned and digitized
+~~ End Column
+~~ begin Column
+![CBETA XSC screengrab_smaller]
+
+[Screenshot of the Commentary displayed in CBETA Online Reader]{.caption}
+~~ End Column
+
+~ End Columns
+
+[CBETA XSC screengrab_smaller]: images/CBETA-XSC-screengrab_smaller.jpg "CBETA XSC screengrab_smaller" { width:auto; max-width:90% }
+
+## CBETA
+
+- For this project, we will use texts digitized and made publicly available by [CBETA (The Chinese Buddhist Electronic Text Association)](http://www.cbeta.org/)
+  - CBETA is based in Taiwan, and sponsored by the Buddhist organization [Dharma Drum Mountain](https://www.ddm.org.tw/)
+  - In addition to making Chinese Buddhist texts available online and offline through their [text reader platform(s)](http://cbetaonline.dila.edu.tw/), 
+  - they also provide [versions suitable for text analysis through Github](https://github.com/DILA-edu/CBETA-txt)
+
+
+## CBETA: Source text data
+
+From this we were able to obtain [digitized versions not only of the _Xingshi chao_, text number T1804](https://github.com/DILA-edu/CBETA-txt/blob/master/T-wPunction/T1804/T1804_000.txt)
+
+- But also the following Five vinaya texts listed as the most commonly cited works in Satō's diagram:
+  - [T1428 _Sifen lü_ 四分律 "The Four-Part Vinaya"](https://github.com/DILA-edu/CBETA-txt/blob/master/T-wPunction/T1428/T1428_000.txt) (477 citations)
+  - [T1421 _Wufen lü_ 五分律 "The Five-part Vinaya"](https://github.com/DILA-edu/CBETA-txt/blob/master/T-wPunction/T1421/T1421_000.txt) (274 citations)
+  - [T1435 _Shisong lü_ 十誦律 "The Ten-recitations Vinaya"](https://github.com/DILA-edu/CBETA-txt/blob/master/T-wPunction/T1435/T1435_000.txt) (414 citations)
+  - [T1425 _Senqie lü_ 僧祇律 "The Mahāsāṅghika Vinaya"](https://github.com/DILA-edu/CBETA-txt/blob/master/T-wPunction/T1425/T1425_000.txt) (476 citations)
+  - [T1462 _Shanjian lü_ 善見律 "The Samanta-pāsādikā Vinaya Commentary"](https://github.com/DILA-edu/CBETA-txt/blob/master/T-wPunction/T1462/T1462_000.txt) (216 Citations)
+
+With this data in hand, we can now begin our analysis
+
+# What are the most common words in these texts?
+- Answering this question, however poses some difficulties:
+  - First of all, there is the problem of *what, in Classical (Buddhist) Chinese counts as a 'word'?*
+    - Unlike modern English, Classical Chinese was written without spaces.
+    - Classical Chinese texts were originally written without punctuation.
+    - Furthermore, 'words' in Classical Chinese do not have a fixed length.
+
+## The n-gram approach
+
+- One common approach to dealing with these problems is to break the text into *n-grams*
+  - An n-gram is a string of characters of the length *n*
+  - For example the single character word word _fo_ 佛 "Buddha", is a 1-gram;
+  - the two-character word _fofa_ 佛法 "the teaching of the Buddha" is a 2-gram (also known as a bigram)
+  - _fofaseng_ 佛法僧 "the Buddha, his teaching, and the monastic order" is a 3-gram (also known as a trigram), etc.
+
+## A script for n-grams
+
+- A simple algorithm such as the following Python script can loop through a text (here, `input_string`) and count all instances of a given n-gram (with n-gram length defined by `substring_length`), and print the result
+
+``` python
+substring_length = 2                          #defines the length of the n-gram
+for characters in range(0,len(input_string)): # iterates through the input string one character at a time
+    substring = input_string[characters:characters+substring_length] #returns substrings of lenght substring_length
+    number = input_string.count(substring)    #uses the built-in function `count` to count the number of instances of the substring in the input_string
+    print(substring+str(number))              # prints the result of substring plus the count
+```
+
+## n-grams: advantages and disadvantages
+
+- The advantage of the n-gram approach is that it is *unsupervised*
+  - That is, we do not need to tell it specifically what words to look for
+- However, this approach can produce *false positives*
+    - i.e. words that in fact should be understood as one complete word may be broken up into two words
+    - Or words that are commonly found together, but are in fact multiple words, may be grouped together as one worde words.
+- [An n-gram analysis of some of the texts in the CBETA corpus has already been made available on github](https://github.com/DILA-edu/CBETA-ngram)
+
+## A dictionary approach
+
+- An alternative approach to finding words in the text is to use a list of words that are likely to be found in the text; i.e. a dictionary. 
+- Several dictionaries have been made available through the [DILA Glossaries project](http://glossaries.dila.edu.tw/?locale=en)
+  - Part of the [digital archives project of the Dharma Drum Institute of Liberal Arts (DILA)](https://lic.dila.edu.tw/en/node/12986#/tab1/cbeta)
+
+## Ding Fubao's _Dictionary of Buddhist Studies_
+
+- One of these is the _Foxue Dacidian_ 佛學大辭典 (Dictionary of Buddhist Studies) by Ding Fubao 丁福保 from 1922.
+  - This source is now in the public domain, and a digitized verions is provided as a [TEI-compliant XML file](http://glossaries.dila.edu.tw/data/dingfubao.dila.tei.p5.xml.zip) under a "Creative Commons Attribution-Share Alike 2.5 Taiwan License"
+  - More information can be found at [the DILA website](http://glossaries.dila.edu.tw/glossaries/DFB?locale=en)
+
+## Extracting Headwords
+- To use this dictionary for our analysis, we must first extract the *headwords* of each entry from the XML file
+  - Headwords were contained in `<form>` tags
+  - An approch using Regular Expressions proved to be simpler than first interpreting the XML file with Python's XML libraries:
+
+``` python
+file = open("../XSC-Analysis/dingfubao.xml", "r", encoding="utf-8") # open the dictionary's source XML file
+data_from_file = file.read()                                        # read in the XML file
+file.close()                                                        # closes the XML file
+import re                                                           # imports the regular expression library
+for match in re.finditer(r"<form>(.+?)<\/form>", data_from_file):   # finds strings that match the regex pattern in the XML file
+    matched_text = match.group(1)                                   # returns the regex match group 1 `(.+?)`
+    print(matched_text)                                             # prints the matched text
+```
+- This resulted in 31366 matches (headwords) which were then [written to a file separated by new lines.](https://github.com/tom-newhall/XSC-Analysis/blob/master/dingfubao-headwords.txt)
+
+## Pros and cons of a dictionary approach
+
+- With a list of words, we can now determine which words appear in our target text.
+  - The advantage of this approach is that it should not generate any 'false positives' (words that are incomplete, or words that are in fact more than one word) 
+  - It can also find words of any legnths, not just a predetermined n-gram length
+- However, the target text may include words that are not found in the dictionary.
+  - i.e. words that are beyond the scope of the dictionary used.
+    - For example, words in the target text that are not considered 'Buddhist terms' but are rather drawn from colloquial Chinese language.
+
+## A script for counting words
+
+- By iterating over the list of words generated from the dictionary, we can now search our target texts for instances of these words
+  - This can be accomplished with the following code:
+
+``` python
+file = open("../XSC-Analysis/T1804/T1804_000(full).txt", \  #opens the file
+            "r", encoding="utf-8")
+sifenlu = file.read()                                       #reads the file into a variable
+file.close()                                                #closes the file, b/c its not needed anymore
+
+word_count = {}                                             # makes a dictionary object for the word counts
+
+for item in dfb_list:                                       # iterates over every word in the headword list (previously loaded)
+    count = 0                                               # begins the word count at 0
+    count = sifenlu.count(item)                             # counts all the instances of that word
+    if not count == 0:                                      # only records if the count is not zero
+        word_count[item] = count                            # adds the word and the count to the word_count dictionary object
+```
+
+## Output
+
+This process produced output that appears as follows:
+
+```
+慧學  1
+二邊  5
+空三昧 1
+行香  7
+犍 12
+行住坐臥  1
+...
+```
+- As predicted, words of varying length were found.
+- These counts represent total numbers of results, rather than a frequency as expressed as a percentage of the total number of words
+- The list is currenly sorted by the order that words appear in the dictionary file, rather than by the largest number of results
+
+## Calculating the frequency
+
+- We can find the frequency of words in a text according to the following formula:
+
+~ begin framed
+Frequency of a word = number of times the word appears in the text / total number of words in the text
+~ end framed
+
+- In order to find the frequency, we need to estimate the total number of words in the text
+
+## Estimating the number of words in a text
+
+Because 'words' in Chinese are not easily defined by spaces as they are in English, we have to estimate the number of words in the text based on the total number of characters in the text:
+
+~ begin framed
+number of words in a text = average length of words / total number of characters
+~ end framed
+
+## Estimating the average length of words
+
+The average legnth of words is found by adding the total length of all words that appear in the text, and dividing by the total number of words that appear.
+
+~ begin Framed
+average length of words = sum of the lengths of words in a text / number of words in a text
+~ end Framed
+
+## A script for computing the average length of words
+
+- The average length of words can be easily computed with the following Python script:
+
+```Python
+word_list = word_count.keys()                                 # loads all the words found in the text as `word_list`
+total_legnth_of_words = 0                                     # initialize the total count of words
+number_of_words = len(word_list)                              # counts the total number of entries in the word list
+for word in word_list:                                        # iterates over the entire list
+    total_legnth_of_words = total_legnth_of_words+ len(word)  # adds the length of characters to the `total_legnth_of_words` variable
+avg_legnth_of_word = total_legnth_of_words / number_of_words  # does the math to compute the average
+print(avg_legnth_of_word)                                     # prints the result
+```
+
+## Computing the total number of words in the _Commentary_
+
+- For the _Commentary_, the average length of words was found to be 2.1559 characters
+
+- Simply using the `len()` function, we were able to determine there to be 253,072 characters in the text
+- Dividing this number by the average length of words we determined that there are approximately 117,387 words in the _Xingshi chao_
+
+## Computing the word frequency
+
+Having estimated the total number of words in the text, we can then calculate the frequency relative to total number of words in the text using the following script:
+
+```python
+word_freqs = {}                                             # creates a new, empty 'dictonary' object
+for word in word_count:                                     # iterates over every word in the list of words and their counts
+    word_frequency = word_count[word]/approx_numb_of_words  # divides the count for each word by the estimated number of words
+    word_freqs[word] = [word_count[word],word_frequency]    #adds both the word count and the frequency to the dictionary object
+```
+
+- The above process was then applied to all of the relevant texts, and then exported as csv files.
+  - These can be found at [my Github repository](https://github.com/tom-newhall/XSC-Analysis)
+  - We can now begin to look at the data generated
+
+# Analysis 1: Looking at raw frequency data
+
+## Word Cloud Visualization
+
+We can visualize the frequency data for the _Commentary_ using a Word Cloud,
+
+~ Center
+![XSC word cloud]
+~
+
+[XSC word cloud]: images/XSC-word-cloud.jpg "XSC word cloud" { width:auto; max-width:90% }
+
+## Bar Chart Visualization
+
+Or a bar chart,
+
+![T1804 Word vs. freq bar chart partial]
+
+
+[T1804 Word vs. freq bar chart partial]: images/T1804-Word-vs.-freq-bar-chart-partial.jpg "T1804 Word vs. freq bar chart partial" { width:auto; max-width:90% }
+
+## Visualized As a spreadsheet
+
+But perhaps the most useful is by looking at the data itself:
+
+ - If we sort the data by frequency, the top 15 terms for the _Commentary_ are as follows:
+
+| Word | Count | Frequency      | Meaning       |
+|------|-------|----------------|---------------|
+| 僧   | 2773  | 0.02362256726  | monk          |
+| 法   | 2597  | 0.02212326259  | the law       |
+| 得   | 2492  | 0.02122879106  | to get        |
+| 人   | 2449  | 0.02086248367  | person        |
+| 有   | 2148  | 0.01829833194  | to be         |
+| 無   | 1873  | 0.0159556684   | to not be     |
+| 受   | 1739  | 0.01481415235  | to accept     |
+| 戒   | 1719  | 0.01464377682  | precepts      |
+| 如   | 1690  | 0.0143967323   | like          |
+| 衣   | 1580  | 0.01345966688  | clothing      |
+| 十   | 1335  | 0.01137256664  | ten           |
+| 食   | 1172  | 0.009984006067 | food          |
+| 比丘 | 1159  | 0.009873261972 | bhikṣu, 'monk'|
+| 心   | 1120  | 0.009541029688 | mind          |
+| 應   | 1089  | 0.009276947617 | should        |
+{font-size: 50%; }
+
+## Looking at bigrams, trigrams and 4+grams
+
+- The majority of the most common terms are single character words
+  - This is likely because these are also contained inside of other longer words, and are thus counted more frequently
+
+By filtering out 1-grams we can get a better sense of the results
+
+## Top 10 two-character words (2-grams) in the _Commentary_: 
+
+| Word | Count | Freq.          | Meaning                                                                                             |
+|------|-------|----------------|-----------------------------------------------------------------------------------------------------|
+| 比丘 | 1159  | 0.009873261972 | transliteration of _bhikṣu_, meaning 'monk'                                                         |
+| 僧祇 | 483   | 0.004114569053 | transliteration of _sangha_ (the group of monks), or an abbreviated title of a Vinaya text          |
+| 四分 | 472   | 0.004020862512 | "Four-part," an abbreviated title of a Vinaya text                                                  |
+| 羯磨 | 409   | 0.003484179592 | transliteration of _karman_, a type of monastic ceremony                                            |
+| 乃至 | 379   | 0.003228616296 | 'up to'                                                                                             |
+| 一切 | 357   | 0.003041203213 | 'all'                                                                                               |
+| 五分 | 282   | 0.002402294975 | "Five-part," an abbreviated title of a Vinaya text                                                  |
+| 吉羅 | 258   | 0.002197844339 | an abbreviation of a transliteration for _duskṛta_, a 'misdemeanor' or category of monastic offense |
+| 大德 | 254   | 0.002163769233 | (person of ) great virtue; a term of respect for monks                                              |
+| 如是 | 251   | 0.002138212903 | 'thus'                                                                                              |
+| 沙彌 | 220   | 0.001874130832 | transliteration of _śrāmaṇera_, a novice monk                                                       |
+{font-size: 50%}
+
+
+## Top 10 three-character words (3-grams) in the _Commentary_:
+
+| Word \ \ \ | Count | Freq.           | Meaning                                                                                                           |
+|-------|-------|-----------------|-------------------------------------------------------------------------------------------------------------------|
+| 五百問 | 84    | 0.0007155772266 | An abbreviated title of a text                                                                                    |
+| 明了論 | 61    | 0.000519645367  | An abbreviated title of a text                                                                                    |
+| 波羅夷 | 57    | 0.0004855702609 | Transliteration of _parajika_; a 'grave offense' or category of monastic offense                                  |
+| 突吉羅 | 48    | 0.0004089012724 | A (non-abbreviated) transliteration of _duskṛta_, a 'misdemeanor' or category of monastic offense                 |
+| 波逸提 | 44    | 0.0003748261663 | Transliteration of _pāyattika_; another category of offense                                                       |
+| 比丘尼 | 41    | 0.0003492698368 | Transliteration of _bhikṣuni_ meaning 'nun'                                                                       |
+| 僧伽梨 | 41    | 0.0003492698368 | Transliteration of _saṃghāṭī_, a monks robe                                                                       |
+| 摩那埵 | 32    | 0.0002726008482 | Transliteration of _mānatta_, the pleasure that is comes from repenting ones wrongdoings                          |
+| 七日藥 | 29    | 0.0002470445187 | "seven days medicine"; a special provison for keeping food longer than is normally permitted when a person is sick|
+| 佛法僧 | 26    | 0.0002214881892 | The buddha, the buddhist teachings, and the group of monks---the "triple gem" of Buddhism                         |
+{font-size: 50%}
+
+
+## Top 5 words with four or more characters in the _Commentary_:
+
+- As expected, as the length of the words increases, the total number of words decreases, as does the total count for each word
+
+| Word　　　　| Count | Freq.           | Meaning                                                                                                                 |
+|----------|-------|-----------------|-------------------------------------------------------------------------------------------------------------------------|
+| 三千威儀 | 14    | 0.0001192628711 | 'the three thousand regulations' (for all aspects of monastic life)                                                     |
+| 索欲問和 | 10    | 8.52E-05        | 'searching for absences and inquiring about harmony' (a term referring to taking attendance at a large monastic meeting)|
+| 偏袒右肩 | 9     | 7.67E-05        | to 'turn and bare the right shoulder' (a sign of respect for a superior)                                                |
+| 十二頭陀 | 8     | 6.82E-05        | the twelve _dhutaṅgas_ (ascetic practices)                                                                              |
+| 心念口言 | 7     | 5.96E-05        | 'with the mind, think it, and with the mouth, say it'                                                                   |
+| 未受具人 | 6     | 5.11E-05        | people who have not yet taken full monastic precepts                                                                    |
+{font-size: 50%}
+
+## Observations (I)
+
+- By in large, the most common words in each category relate to monasticism in some way
+  - the most common 1-gram is _seng_ 僧 meaning "monk" or "group of monastics";
+  - the most common 2-gram is _biqiu_ 比丘 meaning 'monk'
+  - the sixth most common 3-gram is _biqiuni_ 比丘尼 meaning 'nun'
+  - apart from that, many terms, such as names of categories of offenses are specifically related to monasticism rules, and would be uncommon in discussions of Buddhism in general
+- However, this was to be expected
+  - Though unremakable, this reseult does tell us that our method is 'working properly' by confirming what we already know
+
+## Observations (II)
+
+- There are many transliterations among the most common words
+  - This may indicate that readers of this text were presumed to be familiar with such jargon, imported from India
+
+## Observations (III)
+
+- There are many names of texts that appear
+  - This indicates the importance of texts in the _Xingshi chao_
+    - However, these terms could be filtered out in order to find more meaningful terms
+
+## Observations (IV)
+- Most words are concrete nouns; there are relatively few 'grammar words' in these lists
+  - The only such words are the bigrams _naizhi_ 乃至 "up to", _yiqie_ 一切 "all", and _rushi_ 如是 'thus'
+    - We would normally expect more function words to appear in the most frequent spots
+    - This could be because the dictionary we used did not include many such 'grammar words'
+
+
+# Comparison to other texts
+
+- At this point, we have been able to confirm what we already knew or suspected about this text using an algorithmic, statistical method
+  - We found that the texts discusses many terms and concepts related to monasticism
+  - We found that the text refers to many other texts
+  - We found that the texts makes copious use of transliterated terms
+
+- By comparing this text to other texts, can we try to 'filter out' some of the less relevant data and focus on more relevant facts about the text?
+
+## Most frequent 2-character words in the _Four-Part Vinaya_
+
+- We can also visualize the word frequencies of the _Four-Part Vinaya_ text:
+
+~ Center
+![T1428 Word vs. Count top 30 or so]
+~
+[T1428 Word vs. Count top 30 or so]: images/T1428-Word-vs.-Count-top-30-or-so.jpg "T1428 Word vs. Count top 30 or so" { width:auto; max-width:80% }
+
+## 10 Most frequent 2-character words in the _Four-Part Vinaya_ (II)
+
+| Word | Count | Freq           | Meaning                                                                                          |
+|------|-------|----------------|--------------------------------------------------------------------------------------------------|
+| 比丘 | 15712 | 0.04674112905  | Transliteration of _bhikṣu_, meaning 'monk'                                                      |
+| 如是 | 4141  | 0.01231892919  | 'thus'                                                                                           |
+| 世尊 | 3185  | 0.009474955194 | 'world honored (one)' an epithet for the Buddha                                                  |
+| 羯磨 | 2100  | 0.006247223205 | Transliteration of _karman_, a type of monastic ceremony                                         |
+| 吉羅 | 1544  | 0.00459319649  | Abbreviation of a transliteration for _duskṛta_, a 'misdemeanor' or category of monastic offense |
+| 說戒 | 1169  | 0.003477620918 | 'reciting the precepts'; refers to a biweekly recitation ceremony                                |
+| 乃至 | 1145  | 0.003406224081 | 'up to'                                                                                          |
+| 呵責 | 1066  | 0.003171209494 | 'to reprimand' (especially for having commited an offense)                                       |
+| 白佛 | 1054  | 0.003135511075 | 'addressed to the Buddha'                                                                        |
+| 沙門 | 1012  | 0.003010566611 | Transliteration of _śramaṇa_, another name for a monk                                            |
+{font-size: 50%;}
+
+The full dataset can be downloaded [here](https://github.com/tom-newhall/XSC-Analysis/blob/master/T1428_full_stats.csv).
+
+
+## Comparing Bigrams
+
+-Comparing only 2-character words, we find that many of the most common words in the _Vinaya_ are the same as the _Commentary_
+
+| Commentary      |                | Four-part Vinaya |                |
+|-----------------|----------------|------------------|----------------|
+| Word            | Freq.          | Word             | Freq           |
+|-----------------|----------------|------------------|----------------|
+| [比丘]{.red}    | 0.009873261972 | [比丘]{.red}     | 0.04674112905  |
+| 僧祇            | 0.004114569053 | [如是]{.blue}    | 0.01231892919  |
+| 四分            | 0.004020862512 | 世尊             | 0.009474955194 |
+| [羯磨]{.orange} | 0.003484179592 | [羯磨]{.orange}  | 0.006247223205 |
+| [乃至]{.yellow} | 0.003228616296 | [吉羅]{.green}   | 0.00459319649  |
+| 一切            | 0.003041203213 | 說戒             | 0.003477620918 |
+| 五分            | 0.002402294975 | [乃至]{.yellow}  | 0.003406224081 |
+| [吉羅]{.green}  | 0.002197844339 | 呵責             | 0.003171209494 |
+| 大德            | 0.002163769233 | 白佛             | 0.003135511075 |
+| [如是]{.blue}   | 0.002138212903 | 沙門             | 0.003010566611 |
+{font-size: 50%}
+- In particular we notice that the most common word---_biqiu_ 比丘, meaning 'monk'---is the same for both texts.
+  - Though an unremakable result, it shows at least what we would expect---that these texts are quite similar
+
+## Merging the two data sets together
+
+- We've seen how similar these texts are, is there a way to show how they are different?
+
+- In order to compare these two data sets, they must be merged together
+- This can be done easily in Python using the `Pandas` data analysis library
+
+``` python
+import pandas
+df1 = pandas.read_csv("../XSC-Analysis/T1804_full_stats.csv")   # reads in the csv file as a pandas 'dataframe'
+df2 = pandas.read_csv("../XSC-Analysis/T1428_full_stats.csv")   # same as above
+mf1 = pandas.merge(df1, df2, on="word", how='outer')            # merges the two dataframes on their respective 'word' columns
+```
+Note the `how='outer'` flag, which tells the program to include all data in the merged output, even one document includes a word, but not the other.
+
+## Calculating the difference
+
+- We can then subtract the frequency of words in the _Commentary_ from the frequency of the same words in the _Four-part Vinaya_ 
+
+~ begin framed
+freq_diff = frequency(Commentary) - frequency(Four Part Vinaya)
+~ end framed
+
+This can be accomplished with the following Python script, once again using the `Pandas` library
+
+``` python
+mf1 = mf1.fillna(0)                             # using the data frame mf1, created previously, fills in any missing values---terms that were found in one text but not the other---as 0
+mf1['freq_diff'] = mf1.freq1804 - mf1.freq1428  # calculates the delta, and appends this to the data frame
+```
+This can be exported as a [csv file](https://github.com/tom-newhall/XSC-Analysis/blob/master/T1804%20T1428%20diff.csv)
+
+## Visualizing the differences
+
+~ begin Columns
+~~ begin Column
+- Visualizing this data as a bar chart, we see 
+  - there are both great positive values for the difference (orange bar)
+    - This indicates words that are much more common in the _Commentary_ than in the _Vinaya_
+~~ End Column
+~~ begin Column
+![1804 vs. 1428 Top hits]
+~~ End Column
+~ End Columns
+
+
+[1804 vs. 1428 Top hits]: images/1804-vs.-1428-Top-hits.jpg "1804 vs. 1428 Top hits" { width:auto; max-width:90% }
+
+
+## Visualizing the differences (II)
+
+- ..and great negative values
+  - Indicating words that are much more common in the _Vinaya_ than the _Commentary_
+
+~ Center
+![1804 vs. 1428 Greatest negative difference]
+
+[1804 vs. 1428 Greatest negative difference]: images/1804-vs.-1428-Greatest-negative-difference.jpg "1804 vs. 1428 Greatest negative difference" { width:auto; max-width:90% }
+~
+
+
+## Looking at positive differences
+
+~ begin Columns
+~~ begin Column
+- Looking at the largest positive differences we see some unexpected results
+- The largest difference is for the word _de_ 得, a function word meaning 'to obtain' or 'to be able to'
+  - This perhaps indicates a grammatical shift between the language of the _Commentary_ and the _Vinaya_, but the reason is unclear
+
+~~ End Column
+~~ begin Column
+![1804 vs. 1428 Top hits]
+~~ End Column
+~ End Columns
+
+
+## Looking at positive differences (II)
+
+- Other words with high positive frequency differences include: 
+  -_shi_ 十 'ten'; 
+  - _ren_ 人 'person'; 
+  - _ming_ 明 'bright'; 
+  - _shou_ 受 'to accept'; 
+  - _fa_ 法 'law' or 'teaching'; 
+  - _lü_ 律 'Vinaya';
+  - _seng_ 僧 'monk';
+- Several of these words appeared in the highest frequencies of the _Vinaya_ and _Commentary_ alone, indicating that high frequency words were likely to also have the frequency difference between the two texts
+
+## Negative frequency differences
+
+~ begin Columns
+~~ begin Column
+- Negative frequency differences indicate words that appear more commonly in the _Vinaya_ than in the _Commentary_
+- The highest negative difference is for the word _biqiu_ 比丘 'monk' indicating this word appears much more frequenly in the _Vinaya_ than the _Commentary_
+  - However, _biqiu_ 比丘 was also the most common bigram in both the _Commentary_ and the _Vinaya_
+  - Once again this indicates that words with high frequencies are also the most likely to have the highest difference in frequencies.
+
+~~ End Column
+~~ begin Column
+![1804 vs. 1428 Greatest negative difference]
+~~ End Column
+~ End Columns
+
+
+
+
+## Words with count 0 (I)
+
+- One more straighforward way to compare the two texts is to look at words that appear in one text but not the other
+ - The ten most common words found in the _Commentary_, but absent from the _Four-part Vinaya_: 
+
+| Word   | Count (Commentary) |  Count (Vinaya) | Meaning                                     |
+|--------|--------------------|-----------------|---------------------------------------------|
+| 五分   | 282                |  0              | Title of a text                             |
+| 多論   | 111                |  0              | Title of a text                             |
+| 五百問 | 84                 |  0              | Title of a text                             |
+| 三寶   | 74                 |  0              | The "three jewels" of Buddhism              |
+| 了論   | 66                 |  0              | Title of a text                             |
+| 明了論 | 61                 |  0              | Title of a text                             |
+| 五緣   | 61                 |  0              | The 'five conditions'                       |
+| 四緣   | 45                 |  0              | The 'four conditions'                       |
+| 對首   | 43                 |  0              | 'Face to face' (as in a confession)         |
+| 隨相   | 43                 |  0              | 'Following the appearance' (of the precepts)|
+| 五德   | 43                 |  0              | The 'Five Virtues'                          |
+{font-size: 50%}
+
+
+## Words with count 0 (II)
+
+- If we ignore the titles of texts, the terms from _wuyuan_ 五緣 the 'five conditions' and below merit attention.
+  - Although the context is unclear here, most of these terms all have meanings that are analytical categories used in Vinaya scholarship.
+  - The fact that they do not appear in one of Daoxuan's source texts could indicate that he coined these terms
+  - In order to verify this, we must compare these texts again against the wider corpus
+
+# Comparing with other Vinaya texts
+
+- Although we were able to make some interesting observations by comparing Daoxuans _Commentary on the Four-part Vinaya_ with the _Four-part Vinaya_ itself, we also should compare the _Commentary_ with the other text he cites to come to more comprehensive conclusions
+
+## Words found only in the commentary
+
+- If we merge all of the previously generated text statistics, we can easily see words that appear only in the _Commentary_ but do not appear in any of the other texts (here labeled according to their Text number in the database)
+
+| Word   | Count (Commentary) | T1428 | T1421 | T1435 | T1425 | T1462 | Meaning                                           |
+|--------|--------------------|-------|-------|-------|-------|-------|---------------------------------------------------|
+| 多論   | 111                | 0     | 0     | 0     | 0     | 0     | Title of a text                                   |
+| 五百問 | 84                 | 0     | 0     | 0     | 0     | 0     | Title of a text                                   |
+| 了論   | 66                 | 0     | 0     | 0     | 0     | 0     | Title of a text                                   |
+| 明了論 | 61                 | 0     | 0     | 0     | 0     | 0     | Title of a text                                   |
+| 受日   | 41                 | 0     | 0     | 0     | 0     | 0     | "days of taking [leave]"                          |
+| 鈔     | 36                 | 0     | 0     | 0     | 0     | 0     | "commentary"                                      |
+| 持犯   | 33                 | 0     | 0     | 0     | 0     | 0     | "Upholding [the rules] and violating [the rules]" |
+| 四明   | 28                 | 0     | 0     | 0     | 0     | 0     | "Four [types of wisdom]"                          |
+| 法界   | 27                 | 0     | 0     | 0     | 0     | 0     | "The realm of the law"                            |
+| 僧尼   | 25                 | 0     | 0     | 0     | 0     | 0     | "Monks and nuns"                                  |
+| 和僧   | 24                 | 0     | 0     | 0     | 0     | 0     | A harmonious community                            |
+| 料簡   | 23                 | 0     | 0     | 0     | 0     | 0     | To discern                                        |
+| 命梵   | 22                 | 0     | 0     | 0     | 0     | 0     | "life and purity"                                 |
+| 六聚   | 21                 | 0     | 0     | 0     | 0     | 0     | The Six Categories [of offense]                   |
+| 破夏   | 21                 | 0     | 0     | 0     | 0     | 0     | "Breaking the Summer [retreat]"                   |
+| 聖教   | 20                 | 0     | 0     | 0     | 0     | 0     | "The holy teaching"                               |
+| 發戒   | 19                 | 0     | 0     | 0     | 0     | 0     | "generating the precepts"                         |
+| 尚闍梨 | 18                 | 0     | 0     | 0     | 0     | 0     | *Śaṅkhācārya (a proper name)                      |
+| 雜含   | 18                 | 0     | 0     | 0     | 0     | 0     | Abbreviation for a title of a text                |
+{font-size: 50%}
+
+## Observations
+
+- Apart from the text titles, the fact that these are not found in the other source texts imply that some of these terms may be new coinages created by Daoxuan
+  - For example _liuju_ 六聚 "The Six Categories [of offense]" is a categorization scheme though to have first been documented by Daoxuan in this text
+  - Other words such as _mingfan_ 命梵 "life and purity", _poxia_ 破夏 "Breaking the Summer [retreat]", and _fajie_ 發戒 'generating the precepts' appear to be abbreviations that may have been coined by Daoxuan
+    - However, we would need to look at all texts prior to Daoxuan's text to be sure
+
+- The above merged data can be downloaded [here](https://github.com/tom-newhall/XSC-Analysis/blob/master/All%20Vinayas%20diff%20with%20avg.csv)
+
+## Visualization of the full comparison
+
+- When we graph the full data set, we notice similar patterns from previous analyses
+
+- In the following charts we see the *term frequencies for each text* (orange, teal, red, green, and brown bars) sorted according to the *average difference in frequency from the _Commentary_* (blue bars)
+
+## Terms with high positive average difference
+
+~ begin Columns
+
+~~ begin Column
+- Below, we see terms that had *high positive average difference*
+    - i.e. words that were, on average, more common in the _Commentary_ than the other texts
+- Many of the same words appear as they did when we compared the _Commentary_ with the _Four-part Vinaya_ only
+  - Once again, there is no discernable pattern to these high-difference words; they seem like words that would be common across Buddhist or Chinese texts, and do not appear to indicate any particular features of this text.
+
+~~ End Column
+
+~~ begin Column
+![Full comparison(high averages)]
+~~ End Column
+
+~ End Columns
+
+[Full comparison(high averages)]: images/Full-comparison(high-averages).jpg "Full comparison(high averages)" { width:auto; max-width:90% }
+
+
+
+## Terms with high negative average difference
+
+~ begin Columns
+
+~~ begin Column
+- The below chart focuses on terms that had *high negative average difference*
+  - i.e. words that were, on average, more common in other texts than the _Commentary_
+- As with the comparison to the _Four-Part Vinaya_, the word _biqiu_ 比丘 'monk' has the highest negative average difference
+  - Indicating it was more common in the other texts than the _Commentary_
+~~ End Column
+
+~~ begin Column
+![Full comparison(low averages)]
+~~ End Column
+
+~ End Columns
+
+
+
+[Full comparison(low averages)]: images/Full-comparison(low-averages).jpg "Full comparison(low averages)" { width:auto; max-width:90% }
+
+
+
+# Summary and Conclusions
+
+## To Summarize:
+  - We first discussed the background of the _Xingshi chao_ (_Commentary on the Four-part Vinaya_) and discussed a potential *research question*
+    - We then discussed the advantages of using an *algorithmic* *'distant reading'* method
+    - And discussed the necessity to *'functionalize'* our research question 
+  - We then discussed the method for finding and comparing *word frequencies*
+  - We then used a *dictionary method* to find word frequencies in the _Commentary_ as well as its five most commonly cited works
+  - We then discussed this analysis with several visualizations of this frequency data 
+    - We then compared the _Commentary_ to the _Four-Part Vinaya_, and then to the other commonly-cited Vinaya texts 
+
+## Conclusions (I)
+
+- Although we were able to draw some conclusions with this method, by in large, these were either obvious or trivial
+  - For example, we found that the word _biqiu_ 比丘 'monk' was the most common word across all the texts compared
+    - Though this is somewhat interesting, it is not unexpected since we already know the topic of all the texts queried is monks and monasticism
+
+## Conclusions (II)
+
+- Additionally, we found that _biqiu_ 比丘 'monk' had, on average, the highest negative difference in frequency when comparing the _Commentary_ to the works it cites
+  - This means that the word _biqiu_ 比丘 'monk' is more common in the _Vinaya_ texts Daoxuan cites than in Daoxuan's _Commentary_ itself
+  - However, the reason for this is unclear
+    - Is there some reason why Daoxuan uses the word _biqiu_ 比丘 *less* than it is used in Vinaya texts? Or is the word _biqiu_ 比丘 simply an extremely common word in Vinaya texts?
+    - Or is this result simply an artefact of the process of analysis; a statistical anomaly?
+      - Its not clear from this analysis why this should be the case
+        - To investigate the matter further, we would have to compare example passages that use the word _biqiu_ 比丘 in these Vinaya texts to example passages in Daoxuan's _Commentary_
+
+## Conclusions (III)
+
+- We were able to determine, through a simple word frequency analysis that the most common words in the _Commentary_ were ones related to _Vinaya_ exegesis
+  - Once again, this is an expected result
+  - In that sense, we were able to verify, through a partially algorithmic method, something we already knew
+    - The method is only 'partially' algoritmic, because it still requires a human to analyze the results and make the connection that 'these terms are related to Vinaya exegesis
+    - This points out the potential for such algorithmic analysis, but shows that simple statistics are insufficient to produce a complete analysis
+
+## Conclusions (IV)
+
+- Finally, through a simple frequency analysis we were also able to determine that some of the most common words in the _Commentary_ were words transliterated from Indic languages
+  - Though such words are common throughout Buddhist texts, perhaps the frequency in this text is remarkable
+  - This shows that Daoxuan's readership was likely familiar with such Indic terms, despite being Chinese
+
+## Results
+
+In sum, we have three results:
+- The word _biqiu_ 比丘 'monk' is the most common word in both Daoxuan's text and Vinaya texts, but it is much more common in Vinaya texts generally.
+  - The importance of this finding is unclear, but may have something to do with linguistic differences between Daoxuan's work and the Vinaya text he was drawing on.
+
+- Unsurprisingly, the most common words in the _Commentary_ were ones related to _Vinaya_ exegesis
+  - This shows that this statistical and algorithmic method is crude, but has some potential applications
+
+- Some of the most common words in the _Commentary_ were words transliterated from Indic languages
+  - This is unsurprising, but nevertheless shows that such words were well-known to Daoxuan's audience
+
+## Future research
+
+- Though crude, this method seems to show some promise to aid in understanding, analyzing, and translating such difficult texts
+- We hope that through modifying this method, we can improve the results
+- For example, we might
+  - expand the corpus for comparison
+  - use a more sophisticated statistical analysis
+
+## Final thoughts
+
+- However, we must acknowledge that through the process of 'functionalizing' our research question, we fundamentally change the conclusions we arrive at.
+  - Although we made some inroads to understanding the text of Daoxuan's commentary, we still are a long way from answering our original question "What was Daoxuan trying to say in his _Commentary_?"
+  - In the future, it will be important to keep in mind that, at least at this point, questions requiring a discursive and analytical answer, are fundamentally different from questions that can be answered with data. 
+  - The question of *what is the relationship between humanistic questions of judgement and questions of fact?* is perhaps one of the fundamental questions for Digital Humanities, and one that the above research has made an attempt to answer.
+
+# Bibliography and Acknowledgements
+
+The author would like to thank Kristian Allen of the UCLA Data Science Center.
+
+This presentation was made using [Madoko](https://www.madoko.net/), using [RevealJS](https://github.com/hakimel/reveal.js/), and [Tableau](https://www.tableau.com/). Source code (written in Markdown) for this file can be found [here](https://github.com/tom-newhall/XSC-Analysis/blob/master/Topic%20Detection%20for%20Chinese%20Buddhist%20Texts/Topic%20Detection%20for%20Chinese%20Buddhist%20Texts.mdk).
+
+~ Begin bibliography
+
+Clarke, Shayne. “Vinayas.” In _Brill’s Encyclopedia of Buddhism_, edited by Jonathan A. Silk, Oskar von Hinüber, and Vincent Eltschinger, 60–87. Brill, 2015.
+
+Dharma Drum Institute of Liberal Arts (DILA). _Digital Archives Project_ <https://lic.dila.edu.tw/en/node/12986#/tab1/cbeta>
+
+Ding Fubao 丁福保. _Foxue Dacidian_ 佛學大辭典 (Dictionary of Buddhist Studies). Digital version published by Dharma Drum Institute of Liberal Arts (DILA) http://glossaries.dila.edu.tw/glossaries/DFB?locale=en 
+
+Daoxuan 道宣. _Sifenlü shanfan buque xingshi chao_ 四分律刪繁補闕行事鈔. Taisho/CBETA edition.
+
+Editors of CBETA. _Chinese Buddhist Electronic Text Association (CBETA)_ <http://www.cbeta.org/>
+
+Editors of CBETA. _CBETA Online Reader_ <http://cbetaonline.dila.edu.tw/zh/T0001_001>
+
+Fujiyoshi Masumi 藤善真澄. Dōsenden no kenkyū 道宣伝の研究. Kyōto daigaku gakujutsu shuppankai 京都大学学術出版会. 2002.
+
+Heirman, Ann. “Vinaya: From India to China.” In _The Spread of Buddhism_, edited by Ann Heirman and Stephan Peter Bumbacher, 167–203. Leiden: Brill, 2007.
+
+Hirakawa Akira 平川彰. _Genshi bukkyō no kenkyū: Kyōdan soshiki no genkei_ 原始仏教の研究 : 教団組織の原型. Tokyo: Shunjunsha 春秋社, 1964. 
+
+Lavin, Matthew J. "Analyzing Documents with TF-IDF." _The Programming Historian_. 2019. <https://programminghistorian.org/en/lessons/analyzing-documents-with-tfidf>
+
+Moretti, Franco. _Distant Reading_. London ; New York: Verso. 2013.
+
+Satō Tatsugen 佐藤達玄. _Chūgoku ni Okeru Kairitsu no Kenkyū_ 中国仏教における戒律の研究. 木耳社. 1986.
+
+Sturgeon, Donald, ed. The Chinese Text Project https://ctext.org
+
+Sturgeon, Donald. Digital Approaches to Text Reuse in the Early Chinese Corpus, Journal of Chinese Literature and Culture 2018 5(2)
+
+Sturgeon, Donald. Digital Sinology: Modern Methods in Early China studies. https://digitalsinology.org/
+
+Totsugu Kenshō 戸次顕彰. “Shibunritsu gyōjishō no bunkenteki seikaku ni tsuite『四分律行事鈔』の文献的性格について[The Literary Characteristics of the Sifenlu xingshi chao].” _Indogaku bukkyōgaku kenkyū_ 印度學佛教學研究 63 (December 2014): 11–15.
+
+Veidlinger, Daniel, ed. _Digital Humanities and Buddhism: An Introduction_. Boston, MA: de Gruyter. 2019.
+
+Yuanzhao 元照. _Sifenlü xingshichao ke_ 四分律行事鈔科. CBETA Edition, X43 no. 738.
+
+~ end bibliography
+
